@@ -21,4 +21,4 @@ Add-DfsrMember -GroupeName "NomDuGroupe" -ComputerName "Srv1","Srv2" -WhatIf
   # -FolderName : Liste de dossier a Repliquer
   # -ContentPath : Chemin local de destination des fichiers qui seront repliques
   # -ComputerName : Nom SRV qui sera membre primaire
-Set-DfsrMembership -GroupName "NomDuGroupe" -FolderName "Liste/Dossier/A/Repliquer" -ContentPath "Chemin/Dossier/local/pour/contenir/ficchiers/replique" -ComputerName "NomServeurPrimaire" -PrimaryMember $True -Force -WhatIf | Format-Table *name,*path,primary* -auto -wrap
+Set-DfsrMembership -GroupName "NomDuGroupe" -DomainName "NameDomaine.com" -FolderName "Liste/Dossier/A/Repliquer" -ContentPath "Chemin/Dossier/local/pour/contenir/ficchiers/replique" -ComputerName "NomServeurPrimaire" -PrimaryMember $True -Force -WhatIf | Format-Table *name,*path,primary* -auto -wrap
